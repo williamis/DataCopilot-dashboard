@@ -77,7 +77,7 @@ Frontend renders them under “AI insights”.
 
 
 # Image 3 – Category distribution chart
-User selects a column → The app draws a bar chart of value counts using Chart.js.
+User selects a column → The app draws a bar chart of value counts using Recharts.
 ![alt text](image-3.png)
 
 # Image 4 – AI insights (scrolled view)
