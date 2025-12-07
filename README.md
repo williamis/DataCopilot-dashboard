@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## DataCopilot Dashboard (pictures end of the page)
+![alt text](image.png)
+DataCopilot is an AI-powered dashboard for exploring CSV datasets.
+Upload any CSV file and the app automatically generates:
 
-## Getting Started
+A dataset summary (rows, columns, types, missing values)
 
-First, run the development server:
+Column-level profiling
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Category distribution visualization
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+First-row preview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+AI-generated insights using Groq LLM
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Natural-language Q&A (Ask your data)
 
-## Learn More
+Built with Next.js, TypeScript, PapaParse, Recharts, and Groq API.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- CSV Upload – instantly parse and inspect datasets
 
-## Deploy on Vercel
+- Automatic Analysis – detect column types & missing values
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Charts – view category frequency distributions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- AI Insights – overview, key findings, recommendations
+
+- Ask Your Data – ask questions in English and receive AI interpretations
+
+- Modern UI – dark theme, responsive layout
+
+
+## Tech
+
+- Next.js (App Router)
+
+- TypeScript
+
+- PapaParse
+
+- Recharts
+
+- Tailwind CSS
+
+- Groq LLM API
+
+
+## Purpose?
+
+A practical demonstration of:
+
+- LLM-assisted data analysis
+
+- Automated EDA tooling
+
+- Full-stack TypeScript/Next.js development
+
+- Real-world CSV parsing + visualization
+
+
+
+# Image 1 – Dataset summary + AI button
+
+User uploads a CSV → App computes basic stats (rows, columns, types, missing values).
+“Generate AI insights” button will send this metadata to Groq for analysis.
+![alt text](image-1.png)
+
+# Image 2 – AI insights shown
+
+AI request completed.
+Groq returns three sections: Overview, Key findings, Recommendations.
+Frontend renders them under “AI insights”.
+![alt text](image-2.png)
+
+
+# Image 3 – Category distribution chart
+User selects a column → The app draws a bar chart of value counts using Chart.js.
+![alt text](image-3.png)
+
+# Image 4 – AI insights (scrolled view)
+Just a lower view of the same AI output.
+![alt text](image-4.png)
+
+# Columns + CSV preview
+App detects column types + missing values and displays first rows of the CSV for verification.
+![alt text](image-5.png)
+![alt text](image-6.png)
