@@ -1,90 +1,54 @@
-## DataCopilot Dashboard (pictures end of the page)
+# DataCopilot
+
+DataCopilot is a local-first, AI-powered exploratory data analysis (EDA) dashboard. It bridges the gap between raw CSV files and actionable insights by combining robust client-side data processing with the analytical capabilities of the Groq Llama 3 LLM.
 ![alt text](image.png)
-DataCopilot is an AI-powered dashboard for exploring CSV datasets.
-Upload any CSV file and the app automatically generates:
 
-A dataset summary (rows, columns, types, missing values)
-
-Column-level profiling
-
-Category distribution visualization
-
-First-row preview
-
-AI-generated insights using Groq LLM
-
-Natural-language Q&A (Ask your data)
-
-Built with Next.js, TypeScript, PapaParse, Recharts, and Groq API.
-
-
-## Features
-
-- CSV Upload – instantly parse and inspect datasets
-
-- Automatic Analysis – detect column types & missing values
-
-- Charts – view category frequency distributions
-
-- AI Insights – overview, key findings, recommendations
-
-- Ask Your Data – ask questions in English and receive AI interpretations
-
-- Modern UI – dark theme, responsive layout
-
-
-## Tech
-
-- Next.js (App Router)
-
-- TypeScript
-
-- PapaParse
-
-- Recharts
-
-- Tailwind CSS
-
-- Groq LLM API
-
-
-## Purpose?
-
-A practical demonstration of:
-
-- LLM-assisted data analysis
-
-- Automated EDA tooling
-
-- Full-stack TypeScript/Next.js development
-
-- Real-world CSV parsing + visualization
-
-
-
-# Image 1 – Dataset summary + AI button
-
-User uploads a CSV → App computes basic stats (rows, columns, types, missing values).
-“Generate AI insights” button will send this metadata to Groq for analysis.
+![Dashboard Preview]
 ![alt text](image-1.png)
 
-# Image 2 – AI insights shown
+## Core Features & Functionality
 
-AI request completed.
-Groq returns three sections: Overview, Key findings, Recommendations.
-Frontend renders them under “AI insights”.
-![alt text](image-2.png)
+DataCopilot is designed to automate the most time-consuming parts of data analysis. Here is what the application does when you interact with it:
 
+### 1. Automated Data Profiling
+When a user drops a CSV file into the application, it is immediately parsed locally in the browser using PapaParse. The system scans the dataset to detect the schema, identify column data types (strings, numbers, dates), calculate total row counts, and locate missing values. This ensures data privacy, as raw data never leaves the client during the parsing phase.
 
-# Image 3 – Category distribution chart
-User selects a column → The app draws a bar chart of value counts using Recharts.
+### 2. Dynamic Visualizations
+Instead of staring at a wall of numbers, users can select any column from the parsed dataset. The application automatically aggregates the data, calculates sums or value frequencies, and renders interactive bar charts using Recharts. This allows users to spot trends, largest expenses, or category distributions at a glance.
+
+### 3. AI-Assisted Analysis (Copilot Chat)
+The dashboard features an integrated natural language interface. Instead of writing SQL queries or Python scripts, users can type questions about their data. DataCopilot securely compiles the dataset's metadata (schema, column summaries, and top-value aggregations) and sends it to the Groq API. The LLM then returns contextual answers, strategic insights, and trend summaries based on the actual numbers.
+
+### 4. Raw Data Explorer
+To ensure transparency, the application includes a clean, paginated table view. Users can seamlessly toggle between the visual charts and the raw data explorer to manually verify the parsed information and inspect individual rows.
+
+## Tech Stack
+
+* **Framework:** Next.js 14 (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS (Custom Dark/Glassmorphism theme)
+* **Data Parsing:** PapaParse
+* **Visualization:** Recharts
+* **AI Integration:** Groq Cloud API (Llama 3)
+
+## Visual Tour
+
+**Dataset Overview:** High-level metrics calculated instantly upon file upload.
+![Overview Statistics]
 ![alt text](image-3.png)
 
-# Image 4 – AI insights (scrolled view)
-Just a lower view of the same AI output.
-![alt text](image-4.png)
+**Interactive Charts:** Categorized value aggregates and distributions.
+![Visualizations]![alt text](image-5.png)
 
-# Columns + CSV preview
-App detects column types + missing values and displays first rows of the CSV for verification.
-![alt text](image-5.png)
-![alt text](image-6.png)
+**AI Chat Interface:** Conversational data querying with context-aware responses.
+![AI Chat Interface]![alt text]![alt text](image-7.png)![alt text](image-8.png)
+
+**Data Explorer:** Integrated table inspection for manual validation.
+![Data Explorer]
+![alt text](image-2.png)![alt text](image-6.png)
+
+---
+
+### Prerequisites
+* Node.js (v18.x or newer)
+* A Groq API Key (Obtainable from console.groq.com)
