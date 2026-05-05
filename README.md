@@ -3,7 +3,6 @@
 DataCopilot is a local-first, AI-powered exploratory data analysis (EDA) dashboard. It bridges the gap between raw CSV files and actionable insights by combining robust client-side data processing with the analytical capabilities of the Groq Llama 3 LLM.
 ![alt text](image.png)
 
-![Dashboard Preview]
 ![alt text](image-1.png)
 
 ## Core Features & Functionality
@@ -34,18 +33,19 @@ To ensure transparency, the application includes a clean, paginated table view. 
 ## Visual Tour
 
 **Dataset Overview:** High-level metrics calculated instantly upon file upload.
-![Overview Statistics]
 ![alt text](image-3.png)
 
 **Interactive Charts:** Categorized value aggregates and distributions.
-![Visualizations]![alt text](image-5.png)
+![alt text](image-5.png)
 
 **AI Chat Interface:** Conversational data querying with context-aware responses.
-![AI Chat Interface]![alt text]![alt text](image-7.png)![alt text](image-8.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
+
 
 **Data Explorer:** Integrated table inspection for manual validation.
-![Data Explorer]
-![alt text](image-2.png)![alt text](image-6.png)
+![alt text](image-2.png)
+![alt text](image-6.png)
 
 ---
 
