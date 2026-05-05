@@ -47,6 +47,8 @@ To ensure transparency, the application includes a clean, paginated table view. 
 ![alt text](image-2.png)
 ![alt text](image-6.png)
 
+## Final look
+![alt text](image-10.png)
 ---
 
 ### Prerequisites
